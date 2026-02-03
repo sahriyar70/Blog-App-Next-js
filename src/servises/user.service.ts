@@ -1,7 +1,6 @@
 
-import { date } from "better-auth";
-import { error } from "console";
 import { cookies } from "next/headers";
+const AUTH_URL= process.env.AUTH_URL
 
 export const userServise = {
         getSession :async function (){
@@ -10,7 +9,7 @@ export const userServise = {
   console.log(cookieStore)
 
 
-  const res = await fetch ("http://localhost:5000/api/auth/get-session", {headers :{
+  const res = await fetch (`${AUTH_URL}/get-session`, {headers :{
     Cookie : cookieStore.toString(),
   },
   cache : "no-store"

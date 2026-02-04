@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { authClient } from "@/lib/auth-client";
-import { userServise } from "@/servises/user.servise";
+import { userServise } from "@/servises/user.service";
 import { cookies, headers } from "next/headers";
 
 
